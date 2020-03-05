@@ -15,7 +15,12 @@ class CustomerListTableViewController: UIViewController {
 
      
     }
-    
+    private func addLogoutButton()
+       {
+         
+  
+       }
+
     
     /*
     // MARK: - Navigation
