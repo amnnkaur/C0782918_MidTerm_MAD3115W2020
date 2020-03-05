@@ -17,7 +17,9 @@ class CustomerListTableViewController: UIViewController {
     }
     private func addLogoutButton()
        {
-         
+         let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
+              
+              self.navigationItem.leftBarButtonItem = btnLogout
   
        }
 
