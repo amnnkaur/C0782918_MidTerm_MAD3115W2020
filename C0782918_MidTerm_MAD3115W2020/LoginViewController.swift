@@ -23,6 +23,23 @@ class LoginViewController: UIViewController {
     {
         UserDefaults.standard.set(txtEmail.text, forKey: "Email")
         UserDefaults.standard.set(txtPassword.text, forKey: "Password")
+        
+        if txtEmail.text == "aman" && txtPassword.text == "aman"
+        {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
+            
+          //  if let name = self.txtEmail.text
+          //  {
+                //  secondVC. = name
+               self.navigationController?.pushViewController(secondVC, animated: true)
+        }
+        else
+        {
+            
+        }
+             // self.present(secondVC, animated: true, completion: nil)
+        //}
     }
     
 }
