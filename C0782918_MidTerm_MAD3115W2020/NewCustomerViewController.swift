@@ -1,5 +1,5 @@
 //
-//  CustomerListTableViewController.swift
+//  NewCustomerViewController.swift
 //  C0782918_MidTerm_MAD3115W2020
 //
 //  Created by MacStudent on 2020-03-05.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CustomerListTableViewController: UIViewController {
+class NewCustomerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        // Do any additional setup after loading the view.
     }
     
-    
+
     /*
     // MARK: - Navigation
 
