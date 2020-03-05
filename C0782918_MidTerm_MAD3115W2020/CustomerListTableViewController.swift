@@ -24,6 +24,11 @@ class CustomerListTableViewController: UIViewController {
        }
 
     
+     @objc func logout()
+     {
+         self.navigationController?.popViewController(animated: true)
+     }
+     
     /*
     // MARK: - Navigation
 
