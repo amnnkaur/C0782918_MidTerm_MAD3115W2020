@@ -33,7 +33,11 @@ class LoginViewController: UIViewController {
                }
                else
                {
-                   
+                   let alertController = UIAlertController(title: "Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+                
+                   alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                
+                   self.present(alertController, animated: true, completion: nil)
                }
                
            }
