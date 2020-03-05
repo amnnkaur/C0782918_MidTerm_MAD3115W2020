@@ -36,8 +36,10 @@ class CustomerListTableViewController: UIViewController {
     }
     @objc func add()
     {
+         let sb = UIStoryboard(name: "Main", bundle: nil)
+   let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
  
-    }
+      self.navigationController?.pushViewController(thirdVC, animated: true)    }
     /*
     // MARK: - Navigation
 
