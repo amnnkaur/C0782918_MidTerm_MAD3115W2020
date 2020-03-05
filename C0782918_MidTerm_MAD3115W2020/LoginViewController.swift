@@ -13,11 +13,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           // Do any additional setup after loading the view.
+       }
+
     
     @IBAction func barBtnSignIn(_ sender: UIBarButtonItem)
     {
-        
+        UserDefaults.standard.set(txtEmail.text, forKey: "Email")
+        UserDefaults.standard.set(txtPassword.text, forKey: "Password")
+
     }
     
 }
