@@ -13,33 +13,41 @@ class CustomerListTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        self.navigationItem.hidesBackButton = true
+        addLogoutButton()
+        addNewCustomerButton()
     }
-    private func addLogoutButton()
-       {
-         let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
-              
-              self.navigationItem.leftBarButtonItem = btnLogout
-  
-       }
-
     
-     @objc func logout()
-     {
-         self.navigationController?.popViewController(animated: true)
-     }
-     
+
+    private func addLogoutButton()
+    {
+      
+        let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
+        
+        self.navigationItem.leftBarButtonItem = btnLogout
+    }
+    
     private func addNewCustomerButton()
     {
-     let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
-           self.navigationItem.rightBarButtonItem = btnAdd
+         // let action = UIImage(systemName: "square.and.arrow.down")
+        let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
+        self.navigationItem.rightBarButtonItem = btnAdd
     }
+    
     @objc func add()
     {
-         let sb = UIStoryboard(name: "Main", bundle: nil)
-   let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
- 
-      self.navigationController?.pushViewController(thirdVC, animated: true)    }
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+          let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
+        
+             self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
+    
+    
+    @objc func logout()
+    {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
