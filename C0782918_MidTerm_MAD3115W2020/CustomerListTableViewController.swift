@@ -34,6 +34,10 @@ class CustomerListTableViewController: UIViewController {
      let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
            self.navigationItem.rightBarButtonItem = btnAdd
     }
+    @objc func add()
+    {
+ 
+    }
     /*
     // MARK: - Navigation
 
