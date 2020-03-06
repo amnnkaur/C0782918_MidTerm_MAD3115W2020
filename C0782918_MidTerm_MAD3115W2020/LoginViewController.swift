@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var swRememberMe: UISwitch!
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -21,28 +22,40 @@ class LoginViewController: UIViewController {
     
     @IBAction func barBtnSignIn(_ sender: UIBarButtonItem)
     {
-        UserDefaults.standard.set(txtEmail.text, forKey: "Email")
-        UserDefaults.standard.set(txtPassword.text, forKey: "Password")
         
-        if txtEmail.text == "amankaur@gmail.com" && txtPassword.text == "aman"
+        if txtEmail.text == "aman" && txtPassword.text == "aman"
                {
                let sb = UIStoryboard(name: "Main", bundle: nil)
                    let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
                    
                       self.navigationController?.pushViewController(secondVC, animated: true)
-               }
-               else
-               {
-                   let alertController = UIAlertController(title: "Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
                 
-                   alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                
-                   self.present(alertController, animated: true, completion: nil)
-               }
+                if(swRememberMe.isOn)
+                    {
+                        UserDefaults.standard.set(txtEmail.text, forKey: "email")
+                    
+                        UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                    }
+                    else
+                    {
+                        UserDefaults.standard.removeObject(forKey: "email")
+                        
+                        UserDefaults.standard.removeObject(forKey: "password")
+                    }
+                }
+        
                
-           }
+    
+        else
+        {
+                let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+                
+                alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+                
+                self.present(alertController, animated: true, completion: nil)
+        }
 
 
     }
     
-
+}

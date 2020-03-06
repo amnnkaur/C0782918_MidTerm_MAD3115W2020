@@ -12,11 +12,31 @@ class NewCustomerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSaveButton()
 
-        // Do any additional setup after loading the view.
+    }
+    
+     func btnClick() {
+       
+        self.performSegue(withIdentifier: "thirdSegue", sender: self)
     }
     
 
+    private func addSaveButton()
+    {
+        
+        let btnAdd = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        
+        self.navigationItem.rightBarButtonItem = btnAdd
+    }
+    
+    @objc func save()
+    {
+        
+    }
+    
+ 
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +46,6 @@ class NewCustomerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

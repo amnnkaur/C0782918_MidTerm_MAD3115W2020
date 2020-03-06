@@ -14,11 +14,12 @@ class CustomerListTableViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.hidesBackButton = true
+        
         addLogoutButton()
         addNewCustomerButton()
+        
     }
     
-
     private func addLogoutButton()
     {
       
@@ -26,6 +27,12 @@ class CustomerListTableViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = btnLogout
     }
+    
+    @objc func logout()
+    {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     private func addNewCustomerButton()
     {
@@ -42,11 +49,6 @@ class CustomerListTableViewController: UIViewController {
              self.navigationController?.pushViewController(thirdVC, animated: true)
     }
     
-    
-    @objc func logout()
-    {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     /*
     // MARK: - Navigation
