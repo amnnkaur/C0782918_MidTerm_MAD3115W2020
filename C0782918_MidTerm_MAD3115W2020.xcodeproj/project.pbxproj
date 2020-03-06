@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B795F2B241300C70029634F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B795F2A241300C70029634F /* Customer.swift */; };
 		9B92529F24119A1300274938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92529E24119A1300274938 /* AppDelegate.swift */; };
 		9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A024119A1300274938 /* SceneDelegate.swift */; };
 		9B9252A324119A1300274938 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A224119A1300274938 /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B795F2A241300C70029634F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9B92529B24119A1300274938 /* C0782918_MidTerm_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0782918_MidTerm_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B92529E24119A1300274938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9252A024119A1300274938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				9B9252A724119A1400274938 /* Assets.xcassets */,
 				9B9252A924119A1400274938 /* LaunchScreen.storyboard */,
 				9B9252AC24119A1400274938 /* Info.plist */,
+				9B795F2A241300C70029634F /* Customer.swift */,
 			);
 			path = C0782918_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */,
 				9B9252A324119A1300274938 /* LoginViewController.swift in Sources */,
 				9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */,
+				9B795F2B241300C70029634F /* Customer.swift in Sources */,
 				9B92529F24119A1300274938 /* AppDelegate.swift in Sources */,
 				9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */,
 			);
