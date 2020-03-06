@@ -14,7 +14,7 @@ public class Customer
     var lastName : String
     var emailId : String
    // var billDictionary = [Int:Bill]()
-    var totalBillAmount: Float = 0.0
+   // var totalBillAmount: Float = 0.0
    
     init(customerId: Int, firstName: String, lastName: String, emailId : String)
     {
@@ -31,12 +31,12 @@ public class Customer
 //        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
 //        return emailPredicate.evaluate(with: email)
 //    }
-//    
+//
 //    func addBillToCustomer(bill:Bill)
 //    {
 //           billDictionary.updateValue(bill, forKey: bill.billId)
 //    }
-//    
+//
 //    func calculateTotalBillAmount() -> Float
 //    {
 //        var stop: Float = 0.0
@@ -55,19 +55,19 @@ public class Customer
 //     print("~~~~~CUSTOMER INFORMATION~~~~~")
 //        print("Customer ID: \(customerId.customerPrefix())")
 //     print("Customer Name: \(fullName())")
-//        
+//
 //        if self.emailValidation(email: emailId){
 //          print("Customer Email ID : \(self.emailId)")
 //        }
 //        else{
 //         print("Customer Email ID : Email ID is not valid")
 //        }
-//     
-//     
+//
+//
 //     print("\t\t\t\t~~~~~BILL INFORMATION~~~~~")
-//        
+//
 //     print("\t\t******************************************")
-//        
+//
 //     if billDictionary.isEmpty
 //     {
 //         print("\t\t The Customer has no Bills to pay")

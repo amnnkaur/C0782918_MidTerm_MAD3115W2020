@@ -10,10 +10,16 @@ import UIKit
 
 class NewCustomerViewController: UIViewController {
 
+    @IBOutlet weak var txtFirstName: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+  //var customerIntials = ["firstName": String(), "lastName": String(), "txtEmail": String()]
+    
+    var customerIntials : [Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSaveButton()
-
+       // addSaveButton()
+//loadCustomers()
     }
     
      func btnClick() {
@@ -22,17 +28,11 @@ class NewCustomerViewController: UIViewController {
     }
     
 
-    private func addSaveButton()
-    {
-        
-        let btnAdd = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
-        
-        self.navigationItem.rightBarButtonItem = btnAdd
-    }
     
-    @objc func save()
-    {
-        
+
+    @IBAction func barBtnSave(_ sender: UIBarButtonItem) {
+customerIntials.append(Customer(customerId: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, emailId: txtEmail.text!))
+        print(customerIntials)
     }
     
  
