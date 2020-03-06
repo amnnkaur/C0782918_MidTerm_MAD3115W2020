@@ -13,7 +13,7 @@ class NewCustomerViewController: UIViewController {
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
-  //var customerIntials = ["firstName": String(), "lastName": String(), "txtEmail": String()]
+    private static let instance = NewCustomerViewController()
     
     var customerIntials : [Customer] = []
     override func viewDidLoad() {
@@ -21,7 +21,9 @@ class NewCustomerViewController: UIViewController {
        // addSaveButton()
 //loadCustomers()
     }
-    
+    static func getInstance() -> NewCustomerViewController{
+           return instance
+       }
      func btnClick() {
        
         self.performSegue(withIdentifier: "thirdSegue", sender: self)
