@@ -61,3 +61,21 @@ class CustomerListTableViewController: UIViewController {
     */
 
 }
+//extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
+//func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    return 1
+//}
+//
+//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+//    let customer = NewCustomerViewController.[indexPath.row]
+//     
+//    cell?.textLabel?.text = country.name
+//    cell?.detailTextLabel?.text = country.capital
+//    cell?.imageView?.image = country.flag
+//    return cell!
+//}
+//
+//
+// 
+//}

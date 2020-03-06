@@ -27,12 +27,14 @@ class NewCustomerViewController: UIViewController {
         self.performSegue(withIdentifier: "thirdSegue", sender: self)
     }
     
-
+    func loadCustomer() -> [Customer]{
+        customerIntials.append(Customer(customerId: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, emailId: txtEmail.text!))
+        return customerIntials
+    }
     
 
     @IBAction func barBtnSave(_ sender: UIBarButtonItem) {
-customerIntials.append(Customer(customerId: 0, firstName: txtFirstName.text!, lastName: txtLastName.text!, emailId: txtEmail.text!))
-        print(customerIntials)
+print(loadCustomer())
     }
     
  
