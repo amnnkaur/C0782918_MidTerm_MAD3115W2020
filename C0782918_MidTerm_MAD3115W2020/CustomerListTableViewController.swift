@@ -10,7 +10,7 @@ import UIKit
 
 class CustomerListTableViewController: UIViewController {
 
-    var customerArray = NewCustomerViewController.getInstance().loadCustomer()
+    //var customerArray = NewCustomerViewController.getInstance().loadCustomer()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,21 +62,21 @@ class CustomerListTableViewController: UIViewController {
     */
 
 }
-extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
-}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
-    let customer = customerArray[indexPath.row]
-     
-    cell?.textLabel?.text = customerArray.first?.firstName
-    cell?.detailTextLabel?.text = customerArray.first?.lastName
-    //cell?.imageView?.image = 
-    return cell!
-}
-
-
- 
-}
+//extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
+//func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    return 1
+//}
+//
+//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+//    let customer = customerArray[indexPath.row]
+//     
+//    cell?.textLabel?.text = customerArray.first?.firstName
+//    cell?.detailTextLabel?.text = customerArray.first?.lastName
+//    //cell?.imageView?.image = 
+//    return cell!
+//}
+//
+//
+// 
+//}
