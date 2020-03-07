@@ -76,7 +76,7 @@
         <!--Customers-->
         <scene sceneID="cL8-oh-mXO">
             <objects>
-                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZi-Du-F68" customClass="CustomerListTableViewController" customModule="C0782918_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZi-Du-F68" customClass="CustomerListTableViewController" customModule="C0782918_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hRF-Hx-xgw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +103,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wZi-Du-F68" id="PNP-Uq-Nbn"/>
+                                    <outlet property="delegate" destination="wZi-Du-F68" id="xf9-Ri-BCf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -123,6 +127,9 @@
                         <barButtonItem key="backBarButtonItem" title="Logout" id="NvO-6j-nMv"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tblCustomer" destination="bGv-mz-8WM" id="6fI-T5-bLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oA3-m3-m3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
