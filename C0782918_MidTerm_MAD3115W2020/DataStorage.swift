@@ -8,29 +8,29 @@
 
 import Foundation
 class DataStorage{
-    
+
     private static let instance = DataStorage()
     private lazy var customerArray: [Customer] = []
     private init(){}
-    
-   static func getInstance() -> DataStorage{
+
+    static func getInstance() -> DataStorage{
         return instance
     }
-    
-    func addCountry(customer: Customer)
+
+    func addCustomer(customer: Customer)
     {
         self.customerArray.append(customer)
     }
-    
-    func getAllCountries() -> [Customer]
+
+    func getAllCustomers() -> [Customer]
     {
         return self.customerArray
     }
-    
+
     func loadData()
     {
-        
 
-               
+
+
     }
 }

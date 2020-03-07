@@ -15,22 +15,20 @@ class NewCustomerViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
 
     
-    var customerIntials : [Customer] = []
+   // var customerIntials : [Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
        // addSaveButton()
 //loadCustomers()
     }
 
-     func btnClick() {
+     func btnBack() {
        
         self.performSegue(withIdentifier: "thirdSegue", sender: self)
     }
     
- 
-    
-
-    @IBAction func barBtnSave(_ sender: UIBarButtonItem) {
+    @IBAction func barBtnSave(_ sender: UIBarButtonItem)
+    {
         
     }
     
