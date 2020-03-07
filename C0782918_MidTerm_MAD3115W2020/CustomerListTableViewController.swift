@@ -33,7 +33,9 @@ class CustomerListTableViewController: UIViewController {
    
   @objc func logout()
   {
-    self.navigationController?.popViewController(animated: true)
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginViewController
+    self.navigationController?.pushViewController(loginVC, animated: true)
   }
    
    

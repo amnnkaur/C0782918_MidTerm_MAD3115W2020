@@ -18,10 +18,10 @@ class NewCustomerViewController: UIViewController {
     super.viewDidLoad()
      
   }
-   func btnClick() {
-    
-    self.performSegue(withIdentifier: "thirdSegue", sender: self)
-  }
+//   func btnClick() {
+//    
+//    self.performSegue(withIdentifier: "thirdSegue", sender: self)
+//  }
   
   @IBAction func barBtnSave(_ sender: UIBarButtonItem) {
       firstName = self.txtFirstName.text
