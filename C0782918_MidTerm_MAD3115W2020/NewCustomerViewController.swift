@@ -10,6 +10,7 @@ class NewCustomerViewController: UIViewController {
   @IBOutlet weak var txtFirstName: UITextField!
   @IBOutlet weak var txtLastName: UITextField!
   @IBOutlet weak var txtEmail: UITextField!
+     let a = Singleton.getInstance()
   var firstName: String!
   var lastName: String!
   var email: String!
@@ -27,12 +28,18 @@ class NewCustomerViewController: UIViewController {
       firstName = self.txtFirstName.text
       lastName = self.txtLastName.text
       email = self.txtEmail.text
+    
     let sb = UIStoryboard(name: "Main", bundle: nil)
-       let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+    let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
       customerListVC.firstName = firstName
       customerListVC.lastName = lastName
       customerListVC.email = email
+      a.addNewCustomer(First_Name: firstName!, Last_Name: lastName!, email: email!)
+  // Singleton.addNewCustomer(self.firstName,self.lastName,self.email)
     self.navigationController?.pushViewController(customerListVC, animated: true)
+    let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
+
+                   alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
  
   }
  
