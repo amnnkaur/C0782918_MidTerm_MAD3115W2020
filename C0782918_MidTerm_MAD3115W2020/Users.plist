@@ -12,27 +12,9 @@
 		</dict>
 		<dict>
 			<key>email</key>
-			<string>roop@gmail.com</string>
-			<key>password</key>
-			<string>roop</string>
-		</dict>
-		<dict>
-			<key>email</key>
-			<string>monika@gmail.com</string>
-			<key>password</key>
-			<string>monika</string>
-		</dict>
-		<dict>
-			<key>email</key>
 			<string>anmol@gmail.com</string>
 			<key>password</key>
 			<string>anmol</string>
-		</dict>
-		<dict>
-			<key>email</key>
-			<string>kritima@gmail.com</string>
-			<key>password</key>
-			<string>kritima</string>
 		</dict>
 	</array>
 </dict>
