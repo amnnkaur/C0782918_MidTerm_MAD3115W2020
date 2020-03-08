@@ -14,43 +14,56 @@ class LoginViewController: UIViewController {
    
   override func viewDidLoad() {
       super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
       // Do any additional setup after loading the view.
     }
    
   @IBAction func barBtnSignIn(_ sender: UIBarButtonItem)
   {
-     
-    if txtEmail.text == "aman" && txtPassword.text == "aman"
+     if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist")
+     {
+        if let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
         {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-          let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-          
-           self.navigationController?.pushViewController(secondVC, animated: true)
-         
-        if(swRememberMe.isOn)
-          {
-            UserDefaults.standard.set(txtEmail.text, forKey: "email")
-           
-            UserDefaults.standard.set(txtPassword.text, forKey: "password")
-          }
-          else
-          {
-            UserDefaults.standard.removeObject(forKey: "email")
-             
-            UserDefaults.standard.removeObject(forKey: "password")
-          }
+            if let customers = dictionary["Customers"] as? [[String:String]]
+            {
+               // print(customers)
+                for user in customers{
+            
+                    if user["email"] == txtEmail.text && user["password"] == txtPassword.text
+                    {
+                        let sb = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+                      
+                        self.navigationController?.pushViewController(secondVC, animated: true)
+                     
+                            if(swRememberMe.isOn)
+                            {
+                                UserDefaults.standard.set(txtEmail.text, forKey: "email")
+                           
+                                UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                            }
+                            else
+                            {
+                                UserDefaults.standard.removeObject(forKey: "email")
+                             
+                                UserDefaults.standard.removeObject(forKey: "password")
+                            }
+                        
+                    }
+                    else
+                    {
+                        let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+
+                        alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
+   
+                }
+            }
+    
         }
-     
-        
-   
-    else
-    {
-        let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
-         
-        alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
-         
-        self.present(alertController, animated: true, completion: nil)
     }
-  }
-   
 }
