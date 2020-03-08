@@ -6,15 +6,17 @@
 // Copyright © 2020 MacStudent. All rights reserved.
 //
 import UIKit
-class CustomerListTableViewController: UIViewController {
+class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   @IBOutlet weak var tblCustomer: UITableView!
   var firstName: String!
    var lastName: String!
    var email: String!
+var tempvar = Singleton.getInstance()
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.hidesBackButton = true
-     
+     let getdata = Singleton.getInstance()
+        getdata.createCust()
     addLogoutButton()
     addNewCustomerButton()
     //DataStorage.getInstance().loadData()
@@ -63,10 +65,10 @@ class CustomerListTableViewController: UIViewController {
     // Pass the selected object to the new view controller.
   }
   */
-}
-extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
+
+//extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return tempvar.returnCount()
   }
    
   func tableView(in tableview: UITableView) -> Int {
@@ -74,18 +76,28 @@ extension CustomerListTableViewController: UITableViewDataSource, UITableViewDel
   }
    
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+    let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
+    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell",for: indexPath)
       // let customer = customerArray[indexPath.row]
-    
-    cell?.textLabel?.text = firstName
-    cell?.detailTextLabel?.text = lastName
+    cell.textLabel?.text = x?.firstName
+           return cell
+ //   cell?.textLabel?.text = firstName
+  //  cell?.detailTextLabel?.text = lastName
     //cell?.imageView?.image = country.flag
-       return cell!
+    //   return cell!
   }
    
+      func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+          return "List of Customers"
+      }
+      
+      override func viewWillAppear(_ animated: Bool) {
+             tblCustomer.reloadData()
+             
+         }
+
+
 }
-
-
 
 
 
