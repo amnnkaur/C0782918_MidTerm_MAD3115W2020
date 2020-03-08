@@ -43,7 +43,14 @@ class NewCustomerViewController: UIViewController {
  
   }
  
-   
+    @IBAction func backToCustomers(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+                                   
+        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+                                   
+        self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
   /*
   // MARK: - Navigation
   // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -35,9 +35,10 @@ var tempvar = Singleton.getInstance()
    
   @objc func logout()
   {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-    let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginViewController
-    self.navigationController?.pushViewController(loginVC, animated: true)
+    //let sb = UIStoryboard(name: "Main", bundle: nil)
+    //let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginViewController
+   // self.navigationController?.pushViewController(loginVC, animated: true)
+    self.navigationController?.popToRootViewController(animated: true)
   }
    
    

@@ -187,6 +187,16 @@
                         <viewLayoutGuide key="safeArea" id="DPf-uD-1Un"/>
                     </view>
                     <navigationItem key="navigationItem" id="8aD-AE-Eyv">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="koo-AZ-e8r">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qew-KU-6zh">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Customers"/>
+                                <connections>
+                                    <action selector="backToCustomers:" destination="Umv-ht-Q4z" eventType="touchUpInside" id="OGH-Lx-tYY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="a03-vB-83g">
                             <connections>
                                 <action selector="barBtnSave:" destination="Umv-ht-Q4z" id="Zru-Qu-W20"/>

@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
             
                     if user["email"] == txtEmail.text && user["password"] == txtPassword.text
                     {
-                        print("if")
+                       
                         flag = true
                     }}
                          if flag == true{
@@ -50,35 +50,7 @@ class LoginViewController: UIViewController {
                                                    alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
 
                                                    self.present(alertController, animated: true, completion: nil)
-                                       }//                        let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//                        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-//
-//                        self.navigationController?.pushViewController(secondVC, animated: true)
-//
-//                            if(swRememberMe.isOn)
-//                            {
-//                                UserDefaults.standard.set(txtEmail.text, forKey: "email")
-//
-//                                UserDefaults.standard.set(txtPassword.text, forKey: "password")
-//                            }
-//                            else
-//                            {
-//                                UserDefaults.standard.removeObject(forKey: "email")
-//
-//                                UserDefaults.standard.removeObject(forKey: "password")
-//                            }
-                        
-                    
-//                    else
-//                    {
-//                        print("else")
-//                        let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
-//
-//                        alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
-//
-//                        self.present(alertController, animated: true, completion: nil)
-//                    }
+                                       }
                 }
    
                 }
