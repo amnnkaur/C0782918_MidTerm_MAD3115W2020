@@ -10,12 +10,26 @@ import UIKit
 class LoginViewController: UIViewController {
   @IBOutlet weak var txtEmail: UITextField!
   @IBOutlet weak var txtPassword: UITextField!
-  @IBOutlet weak var swRememberMe: UISwitch!
+
    
-  override func viewDidLoad() {
+    @IBOutlet weak var rememberSwitch: UISwitch!
+    override func viewDidLoad() {
       super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
       // Do any additional setup after loading the view.
+     rememberSwitch.addTarget(self, action: #selector(self.stateChanged), for: .valueChanged)
+            let defaults: UserDefaults? = UserDefaults.standard
+
+    // check if defaults already saved the details
+
+        if (defaults?.bool(forKey: "ISRemember"))! {
+                txtEmail.text = defaults?.value(forKey: "SavedUserName") as! String
+                txtPassword.text = defaults?.value(forKey: "SavedPassword") as! String
+                rememberSwitch.setOn(true, animated: false)
+            }
+            else {
+                rememberSwitch.setOn(false, animated: false)
+            }
     }
    
   @IBAction func barBtnSignIn(_ sender: UIBarButtonItem)
@@ -57,5 +71,17 @@ class LoginViewController: UIViewController {
             }
     
         }
+    @objc func stateChanged(_ switchState: UISwitch) {
+
+    let defaults: UserDefaults? = UserDefaults.standard
+        if switchState.isOn {
+        defaults?.set(true, forKey: "ISRemember")
+        defaults?.set(txtEmail.text, forKey: "SavedUserName")
+        defaults?.set(txtPassword.text, forKey: "SavedPassword")
     }
+    else {
+        defaults?.set(false, forKey: "ISRemember")
+        }
+        }
+        }
 

@@ -64,7 +64,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="swRememberMe" destination="Vl7-rP-fFX" id="ONh-Dv-Bu5"/>
+                        <outlet property="rememberSwitch" destination="Vl7-rP-fFX" id="CJp-8T-kWY"/>
                         <outlet property="txtEmail" destination="9GH-4t-OTy" id="i9U-mF-bXT"/>
                         <outlet property="txtPassword" destination="IVX-VI-c04" id="4fd-fs-EJY"/>
                     </connections>
