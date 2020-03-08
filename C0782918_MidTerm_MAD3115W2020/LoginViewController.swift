@@ -27,38 +27,58 @@ class LoginViewController: UIViewController {
             if let customers = dictionary["Customers"] as? [[String:String]]
             {
                // print(customers)
+                var flag = false
                 for user in customers{
             
                     if user["email"] == txtEmail.text && user["password"] == txtPassword.text
                     {
-                        let sb = UIStoryboard(name: "Main", bundle: nil)
-                        
-                        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-                      
-                        self.navigationController?.pushViewController(secondVC, animated: true)
-                     
-                            if(swRememberMe.isOn)
-                            {
-                                UserDefaults.standard.set(txtEmail.text, forKey: "email")
-                           
-                                UserDefaults.standard.set(txtPassword.text, forKey: "password")
-                            }
-                            else
-                            {
-                                UserDefaults.standard.removeObject(forKey: "email")
-                             
-                                UserDefaults.standard.removeObject(forKey: "password")
-                            }
-                        
-                    }
-                    else
-                    {
-                        let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+                        print("if")
+                        flag = true
+                    }}
+                         if flag == true{
+                                           print("Valid user")
+                             let sb = UIStoryboard(name: "Main", bundle: nil)
+                            
+                                                    let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+                            
+                                                    self.navigationController?.pushViewController(secondVC, animated: true)
+                                       }
+                                       else{
+                                           print("Invalid user")
+                            let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
 
-                        alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+                                                   alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
 
-                        self.present(alertController, animated: true, completion: nil)
-                    }
+                                                   self.present(alertController, animated: true, completion: nil)
+                                       }//                        let sb = UIStoryboard(name: "Main", bundle: nil)
+//
+//                        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+//
+//                        self.navigationController?.pushViewController(secondVC, animated: true)
+//
+//                            if(swRememberMe.isOn)
+//                            {
+//                                UserDefaults.standard.set(txtEmail.text, forKey: "email")
+//
+//                                UserDefaults.standard.set(txtPassword.text, forKey: "password")
+//                            }
+//                            else
+//                            {
+//                                UserDefaults.standard.removeObject(forKey: "email")
+//
+//                                UserDefaults.standard.removeObject(forKey: "password")
+//                            }
+                        
+                    
+//                    else
+//                    {
+//                        print("else")
+//                        let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+//
+//                        alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+//
+//                        self.present(alertController, animated: true, completion: nil)
+//                    }
                 }
    
                 }
@@ -66,4 +86,4 @@ class LoginViewController: UIViewController {
     
         }
     }
-}
+
