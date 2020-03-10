@@ -135,6 +135,21 @@
             </objects>
             <point key="canvasLocation" x="1757.9710144927537" y="136.60714285714286"/>
         </scene>
+        <!--Show Bill Details View Controller-->
+        <scene sceneID="QJo-Fd-Jxe">
+            <objects>
+                <viewController storyboardIdentifier="ShowBillDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cek-P6-MNg" customClass="ShowBillDetailsViewController" customModule="C0782918_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlB-vv-Nid">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2ng-xS-1ez"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfl-oW-V9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="-534"/>
+        </scene>
         <!--New Customer-->
         <scene sceneID="LEr-UC-MbF">
             <objects>

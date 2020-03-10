@@ -19,6 +19,7 @@
 		9B9252AB24119A1400274938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9252A924119A1400274938 /* LaunchScreen.storyboard */; };
 		9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B224119D2900274938 /* CustomerListTableViewController.swift */; };
 		9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B42411B00300274938 /* NewCustomerViewController.swift */; };
+		9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9B9252AC24119A1400274938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B9252B224119D2900274938 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B9252B42411B00300274938 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
+		9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9B795F3024130F140029634F /* DataStorage.swift */,
 				9B76F889241459EB0022F47B /* Users.plist */,
 				9B76F88B241462490022F47B /* Singleton.swift */,
+				9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */,
 			);
 			path = C0782918_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */,
 				9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */,
 				9B9252A324119A1300274938 /* LoginViewController.swift in Sources */,
 				9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */,
