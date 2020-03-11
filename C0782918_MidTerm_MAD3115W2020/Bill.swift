@@ -8,7 +8,11 @@
 
 import Foundation
 
-class Bill {
+class Bill: IDisplay {
+
+func display() {
+        
+}
     
     var billId : Int
     var billDate : String
