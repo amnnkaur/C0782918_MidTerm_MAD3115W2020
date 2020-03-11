@@ -15,6 +15,7 @@
 		9B7AB8452419993100750C32 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB8442419993100750C32 /* IDisplay.swift */; };
 		9B7AB8712419A7AE00750C32 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB8702419A7AE00750C32 /* Hydro.swift */; };
 		9B7AB8732419A81700750C32 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB8722419A81700750C32 /* Internet.swift */; };
+		9B7AB8752419A86C00750C32 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB8742419A86C00750C32 /* Mobile.swift */; };
 		9B92529F24119A1300274938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92529E24119A1300274938 /* AppDelegate.swift */; };
 		9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A024119A1300274938 /* SceneDelegate.swift */; };
 		9B9252A324119A1300274938 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A224119A1300274938 /* LoginViewController.swift */; };
@@ -35,6 +36,7 @@
 		9B7AB8442419993100750C32 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		9B7AB8702419A7AE00750C32 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		9B7AB8722419A81700750C32 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		9B7AB8742419A86C00750C32 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		9B92529B24119A1300274938 /* C0782918_MidTerm_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0782918_MidTerm_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B92529E24119A1300274938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9252A024119A1300274938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9B7AB8442419993100750C32 /* IDisplay.swift */,
 				9B7AB8702419A7AE00750C32 /* Hydro.swift */,
 				9B7AB8722419A81700750C32 /* Internet.swift */,
+				9B7AB8742419A86C00750C32 /* Mobile.swift */,
 			);
 			path = C0782918_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */,
 				9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */,
 				9B9252A324119A1300274938 /* LoginViewController.swift in Sources */,
+				9B7AB8752419A86C00750C32 /* Mobile.swift in Sources */,
 				9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */,
 				9B7AB8712419A7AE00750C32 /* Hydro.swift in Sources */,
 				9B795F2B241300C70029634F /* Customer.swift in Sources */,
