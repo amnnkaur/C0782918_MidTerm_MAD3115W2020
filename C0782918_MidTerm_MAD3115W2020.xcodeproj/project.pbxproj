@@ -12,6 +12,7 @@
 		9B795F2B241300C70029634F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B795F2A241300C70029634F /* Customer.swift */; };
 		9B795F3124130F140029634F /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B795F3024130F140029634F /* DataStorage.swift */; };
 		9B7AB843241997AE00750C32 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB842241997AE00750C32 /* Bill.swift */; };
+		9B7AB8452419993100750C32 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AB8442419993100750C32 /* IDisplay.swift */; };
 		9B92529F24119A1300274938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92529E24119A1300274938 /* AppDelegate.swift */; };
 		9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A024119A1300274938 /* SceneDelegate.swift */; };
 		9B9252A324119A1300274938 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252A224119A1300274938 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 		9B795F2A241300C70029634F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9B795F3024130F140029634F /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		9B7AB842241997AE00750C32 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		9B7AB8442419993100750C32 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		9B92529B24119A1300274938 /* C0782918_MidTerm_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0782918_MidTerm_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B92529E24119A1300274938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9252A024119A1300274938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				9B76F88B241462490022F47B /* Singleton.swift */,
 				9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */,
 				9B7AB842241997AE00750C32 /* Bill.swift */,
+				9B7AB8442419993100750C32 /* IDisplay.swift */,
 			);
 			path = C0782918_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				9B92529F24119A1300274938 /* AppDelegate.swift in Sources */,
 				9B7AB843241997AE00750C32 /* Bill.swift in Sources */,
 				9B76F88C241462490022F47B /* Singleton.swift in Sources */,
+				9B7AB8452419993100750C32 /* IDisplay.swift in Sources */,
 				9B795F3124130F140029634F /* DataStorage.swift in Sources */,
 				9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */,
 			);
