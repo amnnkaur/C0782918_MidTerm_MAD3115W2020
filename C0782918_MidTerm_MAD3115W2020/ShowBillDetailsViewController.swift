@@ -14,8 +14,8 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
   
-    @IBOutlet weak var customerID: UILabel!
-    @IBOutlet weak var customerName: UILabel!
+    @IBOutlet weak var customerFirstName: UILabel!
+    @IBOutlet weak var customerLastName: UILabel!
     
     @IBOutlet weak var customerEmail: UILabel!
     @IBOutlet weak var tblBills: UITableView!
@@ -25,14 +25,14 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     var cust : Customer?=nil
     
         override func viewDidLoad() {
-            customerID.text = ShowBillDetailsViewController.email
-             customerName.text = ShowBillDetailsViewController.firstName
+            customerFirstName.text = ShowBillDetailsViewController.email
+             customerLastName.text = ShowBillDetailsViewController.firstName
              customerEmail.text = ShowBillDetailsViewController.lastName
            if cust != nil
             {
 
                // customerID.text = c?.customerId
-                customerName.text = cust?.firstName
+                customerFirstName.text = cust?.firstName
                 customerEmail.text = cust?.emailId
                 
                 

@@ -25,6 +25,7 @@
 		9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B224119D2900274938 /* CustomerListTableViewController.swift */; };
 		9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B42411B00300274938 /* NewCustomerViewController.swift */; };
 		9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */; };
+		9BF91C4A241AE394003B0E89 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9B9252B224119D2900274938 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B9252B42411B00300274938 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
 		9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
+		9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,8 @@
 				9B9252A224119A1300274938 /* LoginViewController.swift */,
 				9B9252B224119D2900274938 /* CustomerListTableViewController.swift */,
 				9B9252B42411B00300274938 /* NewCustomerViewController.swift */,
+				9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */,
+				9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */,
 				9B9252A424119A1300274938 /* Main.storyboard */,
 				9B9252A724119A1400274938 /* Assets.xcassets */,
 				9B9252A924119A1400274938 /* LaunchScreen.storyboard */,
@@ -93,7 +97,6 @@
 				9B795F3024130F140029634F /* DataStorage.swift */,
 				9B76F889241459EB0022F47B /* Users.plist */,
 				9B76F88B241462490022F47B /* Singleton.swift */,
-				9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */,
 				9B7AB842241997AE00750C32 /* Bill.swift */,
 				9B7AB8442419993100750C32 /* IDisplay.swift */,
 				9B7AB8702419A7AE00750C32 /* Hydro.swift */,
@@ -188,6 +191,7 @@
 				9B7AB8452419993100750C32 /* IDisplay.swift in Sources */,
 				9B795F3124130F140029634F /* DataStorage.swift in Sources */,
 				9B7AB8732419A81700750C32 /* Internet.swift in Sources */,
+				9BF91C4A241AE394003B0E89 /* AddNewBillViewController.swift in Sources */,
 				9B9252A124119A1300274938 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
