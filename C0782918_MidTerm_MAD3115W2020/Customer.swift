@@ -13,7 +13,7 @@ public class Customer
     var firstName : String
     var lastName : String
     var emailId : String
-   // var billDictionary = [Int:Bill]()
+    var billDictionary = [Int:Bill]()
    // var totalBillAmount: Float = 0.0
    
     init(customerId: Int, firstName: String, lastName: String, emailId : String)

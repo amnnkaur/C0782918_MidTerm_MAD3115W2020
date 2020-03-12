@@ -37,6 +37,7 @@ class NewCustomerViewController: UIViewController {
       a.addNewCustomer(First_Name: firstName!, Last_Name: lastName!, email: email!)
   // Singleton.addNewCustomer(self.firstName,self.lastName,self.email)
     self.navigationController?.pushViewController(customerListVC, animated: true)
+    
     let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
 
                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
@@ -44,11 +45,8 @@ class NewCustomerViewController: UIViewController {
   }
  
     @IBAction func backToCustomers(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-                                   
-        let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-                                   
-        self.navigationController?.pushViewController(secondVC, animated: true)
+                            
+        self.navigationController?.popViewController(animated: true)
     }
     
   /*

@@ -8,23 +8,52 @@
 
 import UIKit
 
-class ShowBillDetailsViewController: UIViewController {
+class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var tempDic:Dictionary<Int,Bill> = [:]
+  
+    @IBOutlet weak var customerID: UILabel!
+    @IBOutlet weak var customerName: UILabel!
+    
+    @IBOutlet weak var customerEmail: UILabel!
+    @IBOutlet weak var tblBills: UITableView!
+    
+    var sinObj = Singleton.getInstance()
+    
+    var cust : Customer?=nil
+    
+        override func viewDidLoad() {
+            
+           if cust != nil
+            {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+               // customerID.text = c?.customerId
+                customerName.text = cust?.firstName
+                customerEmail.text = cust?.emailId
+                
+                
+                tblBills.delegate = self
+                tblBills.dataSource = self
+            }
+        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let t1 = sinObj.returnCustObject(custID: Int(indexPath.row+1))
+        
+        let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
+        
+        tblCell.textLabel?.text = t1?.firstName
+        return tblCell
     }
-    */
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
+        
+          self.navigationController?.pushViewController(fourthVC, animated: true)
+    }
 }

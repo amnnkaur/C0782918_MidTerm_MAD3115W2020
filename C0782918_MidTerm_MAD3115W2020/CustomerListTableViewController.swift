@@ -8,21 +8,26 @@
 import UIKit
 class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   @IBOutlet weak var tblCustomer: UITableView!
-  var firstName: String!
-   var lastName: String!
-   var email: String!
-var tempvar = Singleton.getInstance()
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    self.navigationItem.hidesBackButton = true
-     let getdata = Singleton.getInstance()
+    var firstName: String!
+    var lastName: String!
+
+    var email: String!
+    var tempvar = Singleton.getInstance()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        let getdata = Singleton.getInstance()
         getdata.createCust()
-    addLogoutButton()
-    addNewCustomerButton()
+        addLogoutButton()
+        addNewCustomerButton()
     //DataStorage.getInstance().loadData()
    // customerArray = DataStorage.getInstance().getAllCustomers()
-     
-     
+    
+    
+    //Code used to add search bar and asssign to header of table
+   // tblCustomer.tableHeaderView = searchController.searchBar
   }
    
   private func addLogoutButton()
@@ -81,6 +86,7 @@ var tempvar = Singleton.getInstance()
     let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell",for: indexPath)
       // let customer = customerArray[indexPath.row]
     cell.textLabel?.text = x?.firstName
+    
            return cell
  //   cell?.textLabel?.text = firstName
   //  cell?.detailTextLabel?.text = lastName
