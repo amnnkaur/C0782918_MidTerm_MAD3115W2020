@@ -98,6 +98,13 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
           return "List of Customers"
       }
       
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let sb = UIStoryboard(name: "Main", bundle: nil)
+           let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
+           
+             self.navigationController?.pushViewController(fourthVC, animated: true)
+       }
+    
       override func viewWillAppear(_ animated: Bool) {
              tblCustomer.reloadData()
              

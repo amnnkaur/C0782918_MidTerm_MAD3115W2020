@@ -50,10 +50,5 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         tblCell.textLabel?.text = t1?.firstName
         return tblCell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
-        
-          self.navigationController?.pushViewController(fourthVC, animated: true)
-    }
+   
 }
