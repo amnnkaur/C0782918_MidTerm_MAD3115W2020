@@ -9,7 +9,7 @@
 import UIKit
 
 class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    static var custId = Int()
+    static var email = String()
     static var firstName = String()
     static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
@@ -25,7 +25,9 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     var cust : Customer?=nil
     
         override func viewDidLoad() {
-            print(ShowBillDetailsViewController.firstName)
+            customerID.text = ShowBillDetailsViewController.email
+             customerName.text = ShowBillDetailsViewController.firstName
+             customerEmail.text = ShowBillDetailsViewController.lastName
            if cust != nil
             {
 
