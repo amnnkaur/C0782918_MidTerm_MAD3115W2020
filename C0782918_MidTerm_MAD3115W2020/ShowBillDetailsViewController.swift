@@ -9,7 +9,9 @@
 import UIKit
 
 class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    static var custId = Int()
+    static var firstName = String()
+    static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
   
     @IBOutlet weak var customerID: UILabel!
@@ -23,7 +25,7 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     var cust : Customer?=nil
     
         override func viewDidLoad() {
-            
+            print(ShowBillDetailsViewController.firstName)
            if cust != nil
             {
 

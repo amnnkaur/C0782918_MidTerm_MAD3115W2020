@@ -99,9 +99,12 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
       }
       
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
+        ShowBillDetailsViewController.custId = x?.customerId ?? 0
+        ShowBillDetailsViewController.firstName = x?.firstName ?? ""
+        ShowBillDetailsViewController.lastName = x?.lastName ?? ""
            let sb = UIStoryboard(name: "Main", bundle: nil)
            let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
-           
              self.navigationController?.pushViewController(fourthVC, animated: true)
        }
     
