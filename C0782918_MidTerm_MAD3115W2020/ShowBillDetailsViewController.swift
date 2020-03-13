@@ -54,10 +54,13 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         
         let t1 = sinObj.returnCustObject(custID: Int(indexPath.row+1))
         
-        let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
-        
-        tblCell.textLabel?.text = t1?.firstName
+        let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillTableViewCell
+        tblCell.billAmount.text = "Bill Amount:" + (t1?.firstName ?? "")
+//        tblCell.textLabel?.text = "k"
         return tblCell
     }
    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(150.0)
+    }
 }

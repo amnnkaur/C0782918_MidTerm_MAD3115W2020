@@ -431,7 +431,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="whr-Cu-PgK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fD8-Ww-cBd"/>
+                    <navigationItem key="navigationItem" id="fD8-Ww-cBd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="trq-9U-MDX">
+                            <connections>
+                                <action selector="barBtnSaveBill:" destination="nLJ-iy-YQt" id="Ize-vs-dtN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billDate" destination="cUQ-gE-eiZ" id="Sgv-2w-NBA"/>
                         <outlet property="billID" destination="pdo-Gy-eqZ" id="E75-jN-hLP"/>

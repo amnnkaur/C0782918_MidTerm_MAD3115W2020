@@ -124,7 +124,9 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
        }
 
     
-
+    @IBAction func barBtnSaveBill(_ sender: UIBarButtonItem) {
+    }
+    
     /*
     // MARK: - Navigation
 
