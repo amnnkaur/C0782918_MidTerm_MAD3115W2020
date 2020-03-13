@@ -26,6 +26,7 @@
 		9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B42411B00300274938 /* NewCustomerViewController.swift */; };
 		9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */; };
 		9BF91C4A241AE394003B0E89 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */; };
+		9BF91C4C241B0AE8003B0E89 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF91C4B241B0AE8003B0E89 /* BillTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9B9252B42411B00300274938 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
 		9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
+		9BF91C4B241B0AE8003B0E89 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9B7AB8702419A7AE00750C32 /* Hydro.swift */,
 				9B7AB8722419A81700750C32 /* Internet.swift */,
 				9B7AB8742419A86C00750C32 /* Mobile.swift */,
+				9BF91C4B241B0AE8003B0E89 /* BillTableViewCell.swift */,
 			);
 			path = C0782918_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				9B7AB8712419A7AE00750C32 /* Hydro.swift in Sources */,
 				9B795F2B241300C70029634F /* Customer.swift in Sources */,
 				9B92529F24119A1300274938 /* AppDelegate.swift in Sources */,
+				9BF91C4C241B0AE8003B0E89 /* BillTableViewCell.swift in Sources */,
 				9B7AB843241997AE00750C32 /* Bill.swift in Sources */,
 				9B76F88C241462490022F47B /* Singleton.swift in Sources */,
 				9B7AB8452419993100750C32 /* IDisplay.swift in Sources */,

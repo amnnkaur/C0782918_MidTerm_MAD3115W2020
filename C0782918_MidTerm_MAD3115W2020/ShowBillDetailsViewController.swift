@@ -24,10 +24,15 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     
     var cust : Customer?=nil
     
-        override func viewDidLoad() {
-            customerFirstName.text = ShowBillDetailsViewController.email
-             customerLastName.text = ShowBillDetailsViewController.firstName
-             customerEmail.text = ShowBillDetailsViewController.lastName
+    override func viewDidLoad() {
+            
+       // self.navigationItem.hidesBackButton = true
+            
+        customerFirstName.text = ShowBillDetailsViewController.firstName
+        customerLastName.text = ShowBillDetailsViewController.lastName
+        customerEmail.text = ShowBillDetailsViewController.email
+            
+            
            if cust != nil
             {
 
