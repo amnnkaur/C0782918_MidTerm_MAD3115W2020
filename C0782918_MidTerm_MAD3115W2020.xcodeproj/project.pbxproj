@@ -24,7 +24,6 @@
 		9B9252AB24119A1400274938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9252A924119A1400274938 /* LaunchScreen.storyboard */; };
 		9B9252B324119D2900274938 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B224119D2900274938 /* CustomerListTableViewController.swift */; };
 		9B9252B52411B00300274938 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9252B42411B00300274938 /* NewCustomerViewController.swift */; };
-		9BC0A821241C3FD400A9B489 /* Vertical_FullColour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC0A820241C3FD400A9B489 /* Vertical_FullColour.jpg */; };
 		9BDAAEBB2418431E006D3AC5 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */; };
 		9BF91C4A241AE394003B0E89 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */; };
 		9BF91C4C241B0AE8003B0E89 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF91C4B241B0AE8003B0E89 /* BillTableViewCell.swift */; };
@@ -50,7 +49,6 @@
 		9B9252AC24119A1400274938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B9252B224119D2900274938 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B9252B42411B00300274938 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
-		9BC0A820241C3FD400A9B489 /* Vertical_FullColour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Vertical_FullColour.jpg; path = ../../../Desktop/Vertical_FullColour.jpg; sourceTree = "<group>"; };
 		9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 		9BF91C4B241B0AE8003B0E89 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				9BDAAEBA2418431E006D3AC5 /* ShowBillDetailsViewController.swift */,
 				9BF91C49241AE394003B0E89 /* AddNewBillViewController.swift */,
 				9B9252A424119A1300274938 /* Main.storyboard */,
-				9BC0A820241C3FD400A9B489 /* Vertical_FullColour.jpg */,
 				9B9252A724119A1400274938 /* Assets.xcassets */,
 				9B9252A924119A1400274938 /* LaunchScreen.storyboard */,
 				9B9252AC24119A1400274938 /* Info.plist */,
@@ -173,7 +170,6 @@
 				9B9252AB24119A1400274938 /* LaunchScreen.storyboard in Resources */,
 				9B9252A824119A1400274938 /* Assets.xcassets in Resources */,
 				9B76F88A241459EB0022F47B /* Users.plist in Resources */,
-				9BC0A821241C3FD400A9B489 /* Vertical_FullColour.jpg in Resources */,
 				9B9252A624119A1300274938 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

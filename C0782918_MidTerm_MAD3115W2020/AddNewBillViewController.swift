@@ -125,6 +125,12 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
 
     
     @IBAction func barBtnSaveBill(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+          let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
+        
+        self.navigationController?.pushViewController(billListVC, animated: true)
+        
     }
     
     /*
