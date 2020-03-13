@@ -13,8 +13,17 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
 
     @IBOutlet weak var billID: UITextField!
     @IBOutlet weak var billType: UITextField!
-    
     @IBOutlet weak var billDate: UITextField!
+    @IBOutlet weak var generalLabel1: UILabel!
+    @IBOutlet weak var generalLabel2: UILabel!
+    @IBOutlet weak var generalLabel3: UILabel!
+    @IBOutlet weak var generalLabel4: UILabel!
+    @IBOutlet weak var generalLabel5: UILabel!
+    @IBOutlet weak var generalTextField1: UITextField!
+    @IBOutlet weak var generalTextField2: UITextField!
+    @IBOutlet weak var generalTextField3: UITextField!
+    @IBOutlet weak var generalTextField4: UITextField!
+    @IBOutlet weak var generalTextField5: UITextField!
     
      var datePicker : UIDatePicker!
        
@@ -23,10 +32,57 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
            //textField_Date.delegate = self
        }
        
-       //MARK:- textFiled Delegate
+    @IBAction func iSegementBillType(_ sender: UISegmentedControl) {
+        isegmentValues(index: sender.selectedSegmentIndex)
+    }
+    //MARK:- textFiled Delegate
        func textFieldDidBeginEditing(_ textField: UITextField) {
            self.pickUpDate(self.billDate)
        }
+    private func isegmentValues(index: Int){
+        switch index{
+        case 0:
+            self.billType.text = "Mobile"
+            self.generalLabel1.isHidden = false
+            self.generalTextField1.isHidden = false
+            self.generalLabel2.isHidden = false
+            self.generalTextField2.isHidden = false
+            self.generalLabel3.isHidden = false
+            self.generalTextField3.isHidden = false
+            self.generalLabel4.isHidden = false
+            self.generalTextField4.isHidden = false
+            self.generalLabel5.isHidden = false
+            self.generalTextField5.isHidden = false
+            self.generalLabel1.text = "Manufacturer Name:"
+            self.generalLabel2.text = "Plan Name:"
+            self.generalLabel3.text = "Mobile Number:"
+            self.generalLabel4.text = "Internet Gb:"
+            self.generalLabel5.text = "Minutes"
+            
+        case 1:
+            self.billType.text = "Internet"
+            self.generalLabel1.text = "Provider Name:"
+            self.generalLabel2.text = "Internet GB:"
+            self.generalLabel3.isHidden = true
+            self.generalTextField3.isHidden = true
+            self.generalLabel4.isHidden = true
+            self.generalTextField4.isHidden = true
+            self.generalLabel5.isHidden = true
+            self.generalTextField5.isHidden = true
+        case 2:
+            self.billType.text = "Hydro"
+            self.generalLabel1.text = "Agency Name:"
+            self.generalLabel2.text = "Units Consumed:"
+            self.generalLabel3.isHidden = true
+            self.generalTextField3.isHidden = true
+            self.generalLabel4.isHidden = true
+            self.generalTextField4.isHidden = true
+            self.generalLabel5.isHidden = true
+            self.generalTextField5.isHidden = true
+        default:
+            self.billType.text = ""
+        }
+    }
        
        //MARK:- Function of datePicker
        func pickUpDate(_ textField : UITextField){
