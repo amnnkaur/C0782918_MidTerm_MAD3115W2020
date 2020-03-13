@@ -35,7 +35,7 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
     @IBAction func iSegementBillType(_ sender: UISegmentedControl) {
         isegmentValues(index: sender.selectedSegmentIndex)
     }
-    //MARK:- textFiled Delegate
+   
        func textFieldDidBeginEditing(_ textField: UITextField) {
            self.pickUpDate(self.billDate)
        }
