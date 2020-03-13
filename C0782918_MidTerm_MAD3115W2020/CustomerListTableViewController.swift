@@ -21,7 +21,7 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
         let getdata = Singleton.getInstance()
         getdata.createCust()
         addLogoutButton()
-        addNewCustomerButton()
+//        addNewCustomerButton()
     //DataStorage.getInstance().loadData()
    // customerArray = DataStorage.getInstance().getAllCustomers()
     
@@ -29,15 +29,15 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
     //Code used to add search bar and asssign to header of table
    // tblCustomer.tableHeaderView = searchController.searchBar
   }
-   
+//
   private func addLogoutButton()
   {
-    
+
     let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
-     
+
     self.navigationItem.leftBarButtonItem = btnLogout
   }
-   
+
   @objc func logout()
   {
     //let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -45,23 +45,29 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
    // self.navigationController?.pushViewController(loginVC, animated: true)
     self.navigationController?.popToRootViewController(animated: true)
   }
-   
-   
-  private func addNewCustomerButton()
-  {
-     // let action = UIImage(systemName: "square.and.arrow.down")
-    let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
-    self.navigationItem.rightBarButtonItem = btnAdd
-  }
-   
-  @objc func add()
-  {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-     let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
-     
-       self.navigationController?.pushViewController(thirdVC, animated: true)
-  }
-   
+
+    @IBAction func addNewCustomerButton(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
+
+          self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
+    //
+//  private func addNewCustomerButton()
+//  {
+//     // let action = UIImage(systemName: "square.and.arrow.down")
+//    let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
+//    self.navigationItem.rightBarButtonItem = btnAdd
+//  }
+//
+//  @objc func add()
+//  {
+//    let sb = UIStoryboard(name: "Main", bundle: nil)
+//     let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
+//
+//       self.navigationController?.pushViewController(thirdVC, animated: true)
+//  }
+
    
   /*
   // MARK: - Navigation

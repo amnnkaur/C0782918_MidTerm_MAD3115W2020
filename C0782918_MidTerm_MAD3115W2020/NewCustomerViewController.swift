@@ -10,11 +10,14 @@ class NewCustomerViewController: UIViewController {
   @IBOutlet weak var txtFirstName: UITextField!
   @IBOutlet weak var txtLastName: UITextField!
   @IBOutlet weak var txtEmail: UITextField!
-     let a = Singleton.getInstance()
-  var firstName: String!
-  var lastName: String!
-  var email: String!
-  var cust: Customer!
+     
+    let a = Singleton.getInstance()
+    var firstName: String!
+    var lastName: String!
+    var email: String!
+    var cust: Customer!
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
      
@@ -43,12 +46,12 @@ class NewCustomerViewController: UIViewController {
                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
  
   }
- 
-    @IBAction func backToCustomers(_ sender: UIButton) {
-                            
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+// 
+//    @IBAction func backToCustomers(_ sender: UIButton) {
+//                            
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//    
   /*
   // MARK: - Navigation
   // In a storyboard-based application, you will often want to do a little preparation before navigation
