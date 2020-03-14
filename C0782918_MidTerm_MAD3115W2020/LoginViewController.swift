@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rememberSwitch: UISwitch!
     override func viewDidLoad() {
       super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3096446991, green: 0.01645434462, blue: 0.1277376115, alpha: 1)
       // Do any additional setup after loading the view.
      rememberSwitch.addTarget(self, action: #selector(self.stateChanged), for: .valueChanged)
             let defaults: UserDefaults? = UserDefaults.standard
