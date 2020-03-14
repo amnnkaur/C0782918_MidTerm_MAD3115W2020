@@ -69,10 +69,7 @@ class Singleton: NSObject
     AddCustomer(customer: c5)
         
     }
-    
-    
-
-    
+        
     func AddCustomer(customer: Customer)
     {
         customerDictionary.updateValue(customer, forKey: customer.customerId)

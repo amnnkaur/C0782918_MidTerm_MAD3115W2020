@@ -25,6 +25,8 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
     @IBOutlet weak var generalTextField4: UITextField!
     @IBOutlet weak var generalTextField5: UITextField!
     
+    let a = Singleton.getInstance()
+    
      var datePicker : UIDatePicker!
        
        override func viewDidLoad() {
