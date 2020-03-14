@@ -267,16 +267,6 @@
                         <viewLayoutGuide key="safeArea" id="2ng-xS-1ez"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bill Details" id="dg2-nO-gbs">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="h0d-DK-pnU">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eBD-gE-8BR">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Customers"/>
-                                <connections>
-                                    <action selector="backToCustomer:" destination="KlW-Qe-2bl" eventType="touchUpInside" id="Rv0-58-F5z"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9mQ-oR-I5u">
                             <connections>
                                 <segue destination="nLJ-iy-YQt" kind="show" id="0jT-zc-NrO"/>
@@ -291,7 +281,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfl-oW-V9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="KlW-Qe-2bl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2666.666666666667" y="-565.17857142857144"/>
         </scene>

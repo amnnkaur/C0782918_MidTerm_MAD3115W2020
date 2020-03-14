@@ -29,16 +29,10 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
        
        override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = false
            //textField_Date.delegate = self
        }
-       
-    @IBAction func backToCustomer(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-                 let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-               
-               self.navigationController?.pushViewController(customerListVC, animated: true)
-    }
+
     @IBAction func iSegementBillType(_ sender: UISegmentedControl) {
         isegmentValues(index: sender.selectedSegmentIndex)
     }
