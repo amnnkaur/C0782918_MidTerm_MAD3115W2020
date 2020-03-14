@@ -11,7 +11,7 @@ import Foundation
 class Singleton: NSObject
 {
      private var customerDictionary  = [Int:Customer]()
-    
+    var billDictionary = [Int:Bill]()
     private static var obj = Singleton()
     
     
@@ -79,6 +79,12 @@ class Singleton: NSObject
         print(customerDictionary)
         
     }
+    
+    func addBillToCustomer(bill:Bill)
+      {
+             billDictionary.updateValue(bill, forKey: bill.billId)
+      }
+    
     func printdata()
     {
         for i in customerDictionary.values
