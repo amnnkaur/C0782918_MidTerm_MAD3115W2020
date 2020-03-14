@@ -30,7 +30,21 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
    // tblCustomer.tableHeaderView = searchController.searchBar
   }
 //
-  
+  private func addLogoutButton()
+  {
+
+    let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
+
+    self.navigationItem.leftBarButtonItem = btnLogout
+  }
+
+  @objc func logout()
+  {
+    //let sb = UIStoryboard(name: "Main", bundle: nil)
+    //let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginViewController
+   // self.navigationController?.pushViewController(loginVC, animated: true)
+    self.navigationController?.popToRootViewController(animated: true)
+  }
 
     @IBAction func addNewCustomerButton(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
