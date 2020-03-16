@@ -109,6 +109,9 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
         ShowBillDetailsViewController.email = x?.emailId ?? ""
         ShowBillDetailsViewController.firstName = x?.firstName ?? ""
         ShowBillDetailsViewController.lastName = x?.lastName ?? ""
+        ShowBillDetailsViewController.cusId = x?.customerId ?? 0
+        AddNewBillViewController.cusId = x?.customerId ?? 0
+        
            let sb = UIStoryboard(name: "Main", bundle: nil)
            let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
              self.navigationController?.pushViewController(fourthVC, animated: true)

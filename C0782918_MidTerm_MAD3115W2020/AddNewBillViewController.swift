@@ -25,6 +25,7 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
     @IBOutlet weak var generalTextField3: UITextField!
     @IBOutlet weak var generalTextField4: UITextField!
     @IBOutlet weak var generalTextField5: UITextField!
+    static var cusId = Int()
     
     let a = Singleton.getInstance()
     
@@ -34,6 +35,7 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = false
            //textField_Date.delegate = self
+        print(AddNewBillViewController.cusId)
        }
 
     @IBAction func iSegementBillType(_ sender: UISegmentedControl) {
@@ -134,7 +136,7 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
         let date = self.billDate.text
         let billType = self.billType.text
         let billAmount = self.billAmount.text
-        DataStorage.getInstance().addBill(bill: Bill.init(billId: billId ?? "", billDate: date ?? "", billType: billType ?? "", billAmount: billAmount ?? ""))
+        DataStorage.getInstance().addBill(bill: Bill.init(cusId: AddNewBillViewController.cusId, billId: billId ?? "", billDate: date ?? "", billType: billType ?? "", billAmount: billAmount ?? ""))
         let sb = UIStoryboard(name: "Main", bundle: nil)
           let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
         

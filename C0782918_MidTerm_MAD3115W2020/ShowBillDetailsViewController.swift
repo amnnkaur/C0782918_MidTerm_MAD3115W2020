@@ -12,6 +12,7 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     static var email = String()
     static var firstName = String()
     static var lastName = String()
+    static var cusId = Int()
     var tempDic:Dictionary<Int,Bill> = [:]
     lazy var billList : [Bill] = []
   
@@ -26,7 +27,7 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     var cust : Customer?=nil
     
     override func viewDidLoad() {
-            
+        print(ShowBillDetailsViewController.cusId)
        // self.navigationItem.hidesBackButton = true
         billList = DataStorage.getInstance().getAllBills()
         customerFirstName.text = ShowBillDetailsViewController.firstName
@@ -57,10 +58,14 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         
         let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillTableViewCell
         let bill = billList[indexPath.row]
+        if bill.cusId == ShowBillDetailsViewController.cusId{
         tblCell.billID.text = "Bill ID: " + bill.billId
         tblCell.billType.text = "Bill Type: " + bill.billType
         tblCell.billDate.text = "Bill Date: " + bill.billDate
-        tblCell.billAmount.text = "Bill Amount: " + bill.billAmount
+            tblCell.billAmount.text = "Bill Amount: " + bill.billAmount}
+        else {
+            
+        }
 //        tblCell.textLabel?.text = "k"
         return tblCell
     }

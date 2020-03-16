@@ -10,12 +10,14 @@ import Foundation
 
 class Bill
 {
+    var cusId: Int
     var billId : String
     var billDate : String
     var billType : String
     var billAmount: String
     
-    init(billId: String, billDate: String, billType: String, billAmount: String){
+    init(cusId: Int, billId: String, billDate: String, billType: String, billAmount: String){
+        self.cusId = cusId
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
