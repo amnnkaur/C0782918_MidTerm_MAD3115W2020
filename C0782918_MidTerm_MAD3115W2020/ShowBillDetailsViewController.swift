@@ -13,6 +13,7 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     static var firstName = String()
     static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
+    lazy var billList : [Bill] = []
   
     @IBOutlet weak var customerFirstName: UILabel!
     @IBOutlet weak var customerLastName: UILabel!
@@ -27,7 +28,7 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
             
        // self.navigationItem.hidesBackButton = true
-            
+        billList = DataStorage.getInstance().getAllBills()
         customerFirstName.text = ShowBillDetailsViewController.firstName
         customerLastName.text = ShowBillDetailsViewController.lastName
         customerEmail.text = ShowBillDetailsViewController.email
@@ -47,15 +48,19 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return billList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let t1 = sinObj.returnCustObject(custID: Int(indexPath.row+1))
+//        let t1 = sinObj.returnCustObject(custID: Int(indexPath.row+1))
         
         let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillTableViewCell
-        tblCell.billAmount.text = "Bill Amount:" + (t1?.firstName ?? "")
+        let bill = billList[indexPath.row]
+        tblCell.billID.text = "Bill ID: " + bill.billId
+        tblCell.billType.text = "Bill Type: " + bill.billType
+        tblCell.billDate.text = "Bill Date: " + bill.billDate
+        tblCell.billAmount.text = "Bill Amount: " + bill.billAmount
 //        tblCell.textLabel?.text = "k"
         return tblCell
     }
