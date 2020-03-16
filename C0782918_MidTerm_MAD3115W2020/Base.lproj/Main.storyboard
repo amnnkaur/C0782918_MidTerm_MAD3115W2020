@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqh-j4-LzK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqh-j4-LzK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -267,6 +267,11 @@
                         <viewLayoutGuide key="safeArea" id="2ng-xS-1ez"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bill Details" id="dg2-nO-gbs">
+                        <barButtonItem key="leftBarButtonItem" image="person" catalog="system" style="plain" id="OIV-Ga-erl">
+                            <connections>
+                                <segue destination="wZi-Du-F68" kind="show" id="aTm-Lc-7gV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9mQ-oR-I5u">
                             <connections>
                                 <segue destination="nLJ-iy-YQt" kind="show" id="0jT-zc-NrO"/>
@@ -596,4 +601,10 @@
             <point key="canvasLocation" x="1757.9710144927537" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person" catalog="system" width="64" height="58"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aTm-Lc-7gV"/>
+    </inferredMetricsTieBreakers>
 </document>
