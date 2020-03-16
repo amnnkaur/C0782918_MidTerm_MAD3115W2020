@@ -62,7 +62,8 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         tblCell.billID.text = "Bill ID: " + bill.billId
         tblCell.billType.text = "Bill Type: " + bill.billType
         tblCell.billDate.text = "Bill Date: " + bill.billDate
-            tblCell.billAmount.text = "Bill Amount: " + bill.billAmount}
+        tblCell.billAmount.text = "Bill Amount: " + bill.billAmount
+        }
         else {
             
         }

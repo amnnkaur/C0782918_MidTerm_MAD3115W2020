@@ -32,19 +32,28 @@ class NewCustomerViewController: UIViewController {
       lastName = self.txtLastName.text
       email = self.txtEmail.text
     
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-    let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-      customerListVC.firstName = firstName
-      customerListVC.lastName = lastName
-      customerListVC.email = email
-      a.addNewCustomer(First_Name: firstName!, Last_Name: lastName!, email: email!)
-  // Singleton.addNewCustomer(self.firstName,self.lastName,self.email)
-    self.navigationController?.pushViewController(customerListVC, animated: true)
-    
-    let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
+    if firstName == "" || lastName == "" || email == ""
+    {
+       print("if")
+  let alertController = UIAlertController(title: "Error!", message:"All fields are required", preferredStyle: .alert)
 
-                   alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
- 
+   alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+
+   self.present(alertController, animated: true, completion: nil)
+    }
+    else{
+
+        
+           print("else")
+          let sb = UIStoryboard(name: "Main", bundle: nil)
+          let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+            customerListVC.firstName = firstName
+            customerListVC.lastName = lastName
+            customerListVC.email = email
+            a.addNewCustomer(First_Name: firstName!, Last_Name: lastName!, email: email!)
+        // Singleton.addNewCustomer(self.firstName,self.lastName,self.email)
+          self.navigationController?.pushViewController(customerListVC, animated: true)
+    }
   }
 // 
 //    @IBAction func backToCustomers(_ sender: UIButton) {
