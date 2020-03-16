@@ -11,6 +11,7 @@ class DataStorage{
 
     private static let instance = DataStorage()
     private lazy var customerArray: [Customer] = []
+     private lazy var billList: [Bill] = []
     private init(){}
 
     static func getInstance() -> DataStorage{
@@ -22,6 +23,14 @@ class DataStorage{
         self.customerArray.append(customer)
     }
 
+    func addBill(bill: Bill){
+        self.billList.append(bill)
+    }
+    
+    func getAllBills() -> [Bill]{
+          return self.billList
+      }
+    
     func getAllCustomers() -> [Customer]
     {
         return self.customerArray
