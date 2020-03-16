@@ -14,6 +14,7 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
     @IBOutlet weak var billID: UITextField!
     @IBOutlet weak var billType: UITextField!
     @IBOutlet weak var billDate: UITextField!
+    @IBOutlet weak var billAmount: UITextField!
     @IBOutlet weak var generalLabel1: UILabel!
     @IBOutlet weak var generalLabel2: UILabel!
     @IBOutlet weak var generalLabel3: UILabel!
@@ -129,6 +130,11 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
     
     @IBAction func barBtnSaveBill(_ sender: UIBarButtonItem) {
         
+        let billId = self.billID.text
+        let date = self.billDate.text
+        let billType = self.billType.text
+        let billAmount = self.billAmount.text
+        DataStorage.getInstance().addBill(bill: Bill.init(billId: billId ?? "", billDate: date ?? "", billType: billType ?? "", billAmount: billAmount ?? ""))
         let sb = UIStoryboard(name: "Main", bundle: nil)
           let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
         

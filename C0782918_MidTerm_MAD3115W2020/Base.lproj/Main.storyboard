@@ -459,6 +459,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="billAmount" destination="9Yv-Yb-2Me" id="7xA-Nu-boX"/>
                         <outlet property="billDate" destination="cUQ-gE-eiZ" id="Sgv-2w-NBA"/>
                         <outlet property="billID" destination="pdo-Gy-eqZ" id="E75-jN-hLP"/>
                         <outlet property="billType" destination="Vxn-uD-yOi" id="eUs-2A-986"/>

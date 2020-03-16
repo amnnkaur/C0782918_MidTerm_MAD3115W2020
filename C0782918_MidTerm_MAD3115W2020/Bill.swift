@@ -8,27 +8,21 @@
 
 import Foundation
 
-class Bill: IDisplay {
-
-func display() {
-        
-}
-    
-    var billId : Int
+class Bill
+{
+    var billId : String
     var billDate : String
-    //var amount : Float
-    enum bTypes: String {
-        case Internet
-        case Mobile
-        case Hydro
-    }
-    var billType : bTypes
+    var billType : String
+    var billAmount: String
     
-    init(billId : Int , billDate : String, billType : bTypes) {
+    init(billId: String, billDate: String, billType: String, billAmount: String){
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
+        self.billAmount = billAmount
+        
     }
+    
     
     
 }
