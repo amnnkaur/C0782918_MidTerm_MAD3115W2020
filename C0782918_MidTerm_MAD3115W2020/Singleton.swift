@@ -76,11 +76,11 @@ class Singleton: NSObject
         print(customerDictionary)
         
     }
-    
-    func addBillToCustomer(bill:Bill)
-      {
-             billDictionary.updateValue(bill, forKey: bill.billId)
-      }
+//    
+//    func addBillToCustomer(bill:Bill)
+//      {
+//             billDictionary.updateValue(bill, forKey: bill.billId)
+//      }
     
     func printdata()
     {
