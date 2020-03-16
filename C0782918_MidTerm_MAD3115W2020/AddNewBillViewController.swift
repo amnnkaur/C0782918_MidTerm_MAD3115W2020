@@ -136,11 +136,20 @@ class AddNewBillViewController: UIViewController,  UITextFieldDelegate {
         let date = self.billDate.text
         let billType = self.billType.text
         let billAmount = self.billAmount.text
+        if billId == "" || date == "" || billType == "" || billAmount == ""{
+            let alertController = UIAlertController(title: "Error!", message:"All fields are required", preferredStyle: .alert)
+
+              alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+
+              self.present(alertController, animated: true, completion: nil)
+        }
+        else{
         DataStorage.getInstance().addBill(bill: Bill.init(cusId: AddNewBillViewController.cusId, billId: billId ?? "", billDate: date ?? "", billType: billType ?? "", billAmount: billAmount ?? ""))
         let sb = UIStoryboard(name: "Main", bundle: nil)
           let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! ShowBillDetailsViewController
-        
-        self.navigationController?.pushViewController(billListVC, animated: true)
+            self.navigationController?.pushViewController(billListVC, animated: true)
+            
+        }
         
     }
     
