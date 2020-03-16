@@ -64,3 +64,4 @@ class ShowBillDetailsViewController: UIViewController, UITableViewDelegate, UITa
         return CGFloat(150.0)
     }
 }
+
